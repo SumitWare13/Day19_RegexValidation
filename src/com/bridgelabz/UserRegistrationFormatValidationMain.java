@@ -11,6 +11,7 @@ public class UserRegistrationFormatValidationMain {
 
         System.out.println("Enter 1 : to Validate First Name ");
         System.out.println("Enter 2 : to Validate Last Name ");
+        System.out.println("Enter 3 : to Validate Email ID ");
 
         int choice = 0;
         while (choice == 0) {
@@ -20,6 +21,9 @@ public class UserRegistrationFormatValidationMain {
                     break;
                 case 2:
                     Validate.lastNameValidation();
+                    break;
+                case 3:
+                    Validate.emailIdValidation();
                     break;
                 default:
                     System.out.println("Enter Valid Choice");

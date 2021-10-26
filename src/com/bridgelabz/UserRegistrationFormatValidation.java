@@ -46,4 +46,23 @@ public class UserRegistrationFormatValidation {
             System.out.println("Enter Last Name According To Pattern: [A-Z]{1}+[a-z]{2,}");
         }
     }
+    //Created A Method For Email ID Validation
+    public void emailIdValidation(){
+        System.out.print("Enter Email Id: " );
+        String emailId = Sc.next();
+
+        /* RegexEmailId Pattern have Total 5 parts: 3 Mandatory & 2 Optional
+            Example:- Abc.xyx@gmail.com.in
+            "Abc, @gmail, .com" Are mandatory Parts In This Pattern
+            ".xyz & .in" Are Optional Part In This Pattern
+        */
+        String regexEmailId = "^[A-Z a-z 1-9]+([.][A-Z a-z 1-9]+)*@[A-Z a-z]{3,5}+.[a-z]{2,3}+([.][a-z]{2})*$";
+        pattern = Pattern.compile(regexEmailId);
+        matcher = pattern.matcher(emailId);
+        Boolean emailIdIs = matcher.matches();
+        System.out.println(emailIdIs);
+        if (!emailIdIs){
+            System.out.println("Enter Email Id According To Pattern: ^[A-Z a-z 1-9]+([.][A-Z a-z 1-9]+)*@[A-Z a-z]{3,5}+.[a-z]{2,3}+([.][a-z]{2})*$");
+        }
+    }
 }
