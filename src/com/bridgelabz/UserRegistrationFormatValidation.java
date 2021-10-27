@@ -82,7 +82,7 @@ public class UserRegistrationFormatValidation {
         Boolean phoneNumberIs = matcher.matches();
         System.out.println(phoneNumberIs);
         if (!phoneNumberIs){
-            System.out.println("Enter Email Id According To Pattern: ^[0-9]{2}[0-9]{10}\s$");
+            System.out.println("Enter Email Id According To Pattern: ^[0-9]{2}[0-9]{10}$");
         }
     }
     //Created A Method For Password Validation
@@ -92,14 +92,15 @@ public class UserRegistrationFormatValidation {
         /*String regexPassword have:
             Minimum 1 Capital character
             Password must have minimum 8 characters
-         */
-        String regexPassword = "^[A-Z]{1}+[A-Z a-z]{8,}$";
+            Minimum 1 Numeric character
+        */
+        String regexPassword = "^[A-Z]{1}+[A-Z a-z]{8,}+[0-9]{1,}$";
         pattern = Pattern.compile(regexPassword);
         matcher = pattern.matcher(password);
         Boolean passwordIs = matcher.matches();
         System.out.println(passwordIs);
         if (!passwordIs){
-            System.out.println("Enter Email Id According To Pattern: ^[0-9]{2}[0-9]{10}\s$");
+            System.out.println("Enter Email Id According To Pattern: [A-Z]{1}+[A-Z a-z]{8,}+[0-9]{1,}");
         }
     }
 }
