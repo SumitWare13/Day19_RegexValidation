@@ -97,7 +97,7 @@ public class UserRegistrationFormatValidation {
         Boolean passwordIs = matcher.matches();
         System.out.println(passwordIs);
         if (!passwordIs){
-            System.out.println("Enter Email Id According To Pattern: ^[0-9]{2}[0-9]{10}\s$");
+            System.out.println("Enter Email Id According To Pattern: [A-Z a-z]{8,}");
         }
     }
 }
