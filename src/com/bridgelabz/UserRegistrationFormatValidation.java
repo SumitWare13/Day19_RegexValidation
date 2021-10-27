@@ -89,8 +89,7 @@ public class UserRegistrationFormatValidation {
         System.out.print("Enter Password: ");
         String password = Sc.next();
         /*String regexPassword have:
-            1st part is for Country Code
-            2nd part is for 10-digit number
+           Password must have minimum 8 characters
          */
         String regexPassword = "^[A-Z a-z]{8,}$";
         pattern = Pattern.compile(regexPassword);
