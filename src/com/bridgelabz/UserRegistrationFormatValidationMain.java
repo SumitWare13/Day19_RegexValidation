@@ -13,6 +13,7 @@ public class UserRegistrationFormatValidationMain {
         System.out.println("Enter 2 : to Validate Last Name ");
         System.out.println("Enter 3 : to Validate Email ID ");
         System.out.println("Enter 4 : to Validate Phone Number ");
+        System.out.println("Enter 5 : to Validate Password ");
 
         int choice = 0;
         while (choice == 0) {
@@ -28,6 +29,9 @@ public class UserRegistrationFormatValidationMain {
                     break;
                 case 4:
                     Validate.phoneNumberValidation();
+                    break;
+                case 5:
+                    Validate.passwordValidation();
                     break;
                 default:
                     System.out.println("Enter Valid Choice");

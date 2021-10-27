@@ -85,4 +85,20 @@ public class UserRegistrationFormatValidation {
             System.out.println("Enter Email Id According To Pattern: ^[0-9]{2}[0-9]{10}\s$");
         }
     }
+    public void passwordValidation(){
+        System.out.print("Enter Password: ");
+        String password = Sc.next();
+        /*String regexPassword have:
+            1st part is for Country Code
+            2nd part is for 10-digit number
+         */
+        String regexPassword = "^[A-Z a-z]{8,}$";
+        pattern = Pattern.compile(regexPassword);
+        matcher = pattern.matcher(password);
+        Boolean passwordIs = matcher.matches();
+        System.out.println(passwordIs);
+        if (!passwordIs){
+            System.out.println("Enter Email Id According To Pattern: ^[0-9]{2}[0-9]{10}\s$");
+        }
+    }
 }
