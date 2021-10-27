@@ -93,14 +93,15 @@ public class UserRegistrationFormatValidation {
             Minimum 1 Capital character
             Password must have minimum 8 characters
             Minimum 1 Numeric character
+            Minimum 1 Special character
         */
-        String regexPassword = "^[A-Z]{1}+[A-Z a-z]{8,}+[0-9]{1,}$";
+        String regexPassword = "^[A-Z]{1}+[A-Z a-z]{8,}+[!@#$%^&*_+]{1}+[0-9]{1,}$";
         pattern = Pattern.compile(regexPassword);
         matcher = pattern.matcher(password);
         Boolean passwordIs = matcher.matches();
         System.out.println(passwordIs);
         if (!passwordIs){
-            System.out.println("Enter Email Id According To Pattern: [A-Z]{1}+[A-Z a-z]{8,}+[0-9]{1,}");
+            System.out.println("Enter Email Id According To Pattern: [A-Z]{1}+[A-Z a-z]{8,}+[!@#$%^&*_+]{1}+[0-9]{1,}");
         }
     }
 }
